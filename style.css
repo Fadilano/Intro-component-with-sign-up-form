@@ -1,0 +1,270 @@
+:root {
+    /* warna */
+    --clr-primary-400: hsl(0, 100%, 74%);
+    --clr-secondary-400: hsl(154, 59%, 51%);
+    --clr-accent-400: hsl(248, 32%, 49%);
+    --clr-neutral-400: hsl(249, 10%, 26%);
+    --clr-neutral-300: hsl(246, 25%, 77%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    /* font */
+    --font-f-default: 'Poppins', sans-serif;
+    --font-w-light: 300;
+    --font-w-regular: 400;
+    --font-w-medium: 500;
+    --font-w-semibold: 600;
+    --font-w-bold: 700;
+
+    --font-s-300: .8rem;
+    --font-s-400: 1rem;
+    --font-s-500: 1.5rem;
+    --font-s-700: 1.75rem;
+}
+
+/* reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+    margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*
+    5. Improve media defaults
+  */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/*
+    6. Remove built-in form typography styles
+  */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+    font: inherit;
+}
+
+/*
+    8. Create a root stacking context
+  */
+#root, #__next {
+    isolation: isolate;
+}
+
+/* reset */
+body {
+    --border-radius: 0.5rem;
+    font-family: var(--font-f-default);
+    font-weight: var(--font-w-regular);
+    font-size: var(--font-s-400);
+    background-color: var(--clr-primary-400);
+    margin: 1rem;
+    background-image: url(images/bg-intro-mobile.png);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    /* height: */
+    color: var(--clr-neutral-100);
+}
+
+.intro {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 3.5rem;
+    /* margin: 3.5rem 0 3.5rem 0; */
+}
+
+.title {
+    font-size: var(--font-s-700);
+    font-weight: var(--font-w-bold);
+}
+
+.card {
+    background-color: var(--clr-accent-400);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 3.5rem; */
+    width: 100%;
+
+    border-radius: var(--border-radius);
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+}
+
+.card-p {
+    padding: 3.7rem;
+    text-align: center;
+}
+
+.card-p span {
+    font-weight: var(--font-w-semibold);
+}
+
+.form-input {
+    margin-top: 1.5rem;
+    display: grid;
+    padding: 1rem;
+    gap: .5rem;
+    background-color: var(--clr-neutral-100);
+    border-radius: .5rem;
+    /* max-width: ; */
+    min-width: 345px;
+    max-width: 600px;
+    margin-bottom: 3.5rem;
+    box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 8px 0px 0px rgba(0, 0, 0, 0.14);
+}
+
+input[name="input-box"] {
+    border-radius: var(--border-radius);
+    height: 3.5rem;
+    border: 1px solid var(--clr-neutral-300);
+    color: var(--clr-neutral-400);
+    font-weight: var(--font-w-semibold);
+    padding-left: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[name="input-box"]::--webkit-input-placeholder {
+    color: var(--clr-neutral-300);
+}
+
+input[name="input-box"]:focus {
+    color: var(--clr-neutral-400);
+    border: 1px solid var(--clr-neutral-300);
+}
+
+/* error state */
+    /* input[name="input-box"] {
+        align-content: flex-end;
+        border-radius: var(--border-radius);
+        height: 3.5rem;
+        border: 2px solid var(--clr-primary-400);
+        color: var(--clr-neutral-400);
+        font-weight: var(--font-w-semibold);
+        padding-left: 1rem;
+        transition: border-color 0.3s ease;
+        padding-left: 30px;
+        background-image: url('images/icon-error.svg');
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: right 10px center;;
+    }
+
+    input[name="input-box"]::placeholder {
+        color: #fff;
+    } */
+
+
+/* error state */
+.form-input label {
+    color: var(--clr-primary-400);
+    text-align: end;
+    font-size: var(--font-s-300);
+    font-style: italic  ;
+    font-weight: var(--font-w-medium);
+    display: none;  
+}
+
+
+#submit {
+    height: 3.5rem;
+    text-transform: uppercase;
+    background-color: var(--clr-secondary-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--font-w-medium);
+    font-size: var(--font-s-400);
+    border: 0;
+    border-radius: var(--border-radius);
+    box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.14) inset;
+    -webkit-box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.14) inset;
+    -moz-box-shadow: 0px -5px 0px 0px rgba(0, 0, 0, 0.14) inset;
+
+}
+
+#submit:hover {
+    background-color: hsl(154, 59%, 70%);
+}
+
+
+.footer {
+    color: var(--clr-neutral-300);
+    font-size: var(--font-s-300);
+    font-weight: var(--font-w-medium);
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer span {
+    color: var(--clr-primary-400);
+    font-weight: var(--font-w-bold);
+}
+
+@media (min-width:600px) {
+    body {
+        background-image: url(images/bg-intro-desktop.png);
+        height: 100vh;
+        margin: 0 4rem;
+    }
+
+    .flex-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .intro {
+        text-align: left;
+        max-width: 600px;
+        margin: 0;
+    }
+
+    .title {
+        text-align: left;
+        font-size: 3rem;
+    }
+
+    .card {
+        height: 4rem;
+    }
+
+    .form-input {
+        padding: 2rem;
+        margin-bottom: 0;
+    }
+
+}

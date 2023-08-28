@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- top -->
+    <div class="flex-group">
+      <div class="left">
+        <div class="container">
+          <div class="intro">
+            <h1 class="title">Learn to code by watching others</h1>
+            <p class="intro-p">
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </div>
+        </div>
+      </div>
+        <!-- mid -->
+        <div class="right">
+        <div class="card">
+          <p class="card-p">
+            <span>Try it free 7 days</span> then $20/mo. thereafter
+          </p>
+        </div>
+        <!-- bottom -->
+        <form name="input-form"action="" class="form-input">
+          <input
+              type="text"
+              placeholder="First Name"
+              name="input-box"
+              id="firstname"
+            />
+            <label id="label-firstname"for="firstname">First Name cannot be empty</label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="input-box"
+              id="lastname"
+            />
+            <label id="label-lastname"for="lastname">Last Name cannot be empty</label>
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="input-box"
+              id="email"
+            />
+            <label id="label-email"for="email">Looks like this is not an email</label>
+            <input
+              type="password"
+              placeholder="Password"
+              name="input-box"
+              id="password"
+            />
+            <label id="label-password" for="password">Password cannot be empty</label>
+            <button id="submit">claim your free trial</button>
+
+            <p class="footer">
+              By clicking the button, you are agreeing to our
+              <span>Terms and Services</span>
+            </p>
+        </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
